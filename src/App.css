@@ -1,0 +1,73 @@
+#root {
+  width: 100%;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.app {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-height: 100vh;
+}
+
+.goods-header {
+  display: flex;
+  justify-content: space-between;
+}
+
+.goods-breadcrumbs {
+  display: flex;
+  align-items: center;
+}
+
+.goods-action button {
+  margin-left: 5px;
+}
+
+.goods-th span,
+.goods-th svg {
+  color: #aaa !important;
+}
+
+.logout-button {
+  color: inherit !important;
+  padding: 0px !important;
+  font-size: 10px !important;
+}
+
+@media screen and (max-width: 600px) {
+  .goods-header {
+    flex-direction: column;
+  }
+  .goods-breadcrumbs {
+    margin-bottom: 10px;
+  }
+  .goods-action {
+    display: flex;
+  }
+}
+
+@media print {
+  .app {
+    width: 100% !important;
+    max-width: 100% !important;
+    min-width: 100% !important;
+  }
+  .auth-box button {
+    display: none;
+  }
+  .goods-action {
+    display: none;
+  }
+  .goods-th .action-th,
+  .goods-tb .action-tb,
+  .goods-tb .ct-tb button {
+    display: none;
+  }
+
+  .goods-tb .ct-tb {
+    padding: 24px 0px;
+    padding-right: 8px;
+  }
+}
